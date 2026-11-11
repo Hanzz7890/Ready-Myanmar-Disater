@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Research | Ready Myanmar</title>
+    <link rel="icon" type="image/png" href="images/ready-myanmar-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="resources.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+<nav class="navbar navbar-expand-xl sticky-top border-bottom py-3"
+        aria-label="Main navigation">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-2"
+                href="index.html">
+
+                <img class="nav-logo"
+                    src="images/ready-myanmar-logo.png"
+                    alt=""
+                    width="40"
+                    height="40">
+
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+
+            <button class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+
+                <ul class="navbar-nav mx-auto align-items-xl-center gap-xl-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">
+                            Understand the Risks
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">
+                            Explore Regions
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <button class="nav-link dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Prepare
+                        </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2"></i>
+                                    Prepare overview
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="Checklist.html">
+                                    <i class="bi bi-list-check me-2"></i>
+                                    Household checklist
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2"></i>
+                                    Safety guides
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">
+                            Resources
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="nav-actions">
+
+                    <a class="btn btn-sage" href="SafetyGuides.html">
+                        Find Safety Guidance
+                    </a>
+
+                    <div class="account-actions" id="guestActions">
+
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="login">
+                            <i class="bi bi-person me-1"></i>
+                            Log in
+                        </button>
+
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="signup">
+                            Sign up
+                        </button>
+
+                    </div>
+
+                    <div class="account-actions" id="memberActions" hidden>
+
+                        <span class="account-name">
+                            <i class="bi bi-person-check"></i>
+                            <span id="accountName"></span>
+                        </span>
+
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            id="logoutButton">
+                            Log out
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <main id="mainContent">
+        <section class="page-hero">
+            <div class="container" data-aos="fade-up">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Resources</li>
+                    </ol>
+                </nav>
+                <p class="eyebrow">READY MYANMAR</p>
+                <h1>Research, data & reliable resources.</h1>
+                <p class="hero-description">Explore trusted disaster information, learn from documented events in Myanmar, and discover the evidence behind safer preparation.</p>
+                <div class="hero-links">
+                    <a class="btn btn-sage" href="#research-data">Explore research data</a>
+                    <a class="btn btn-outline-sage" href="#resource-library">Browse resources</a>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="resource-library">
+            <div class="container">
+                <div class="section-heading mb-4" data-aos="fade-up">
+                    <p class="eyebrow">RESOURCE LIBRARY</p>
+                    <h2>Explore information you can trust.</h2>
+                    <p>Search publications from scientific agencies, humanitarian organisations and official preparedness services. Each resource opens its original source.</p>
+                </div>
+                <div class="search-panel" data-aos="fade-up">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label class="form-label" for="resourceSearch">Search resources</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                </span>
+                                <input class="form-control" type="search" id="resourceSearch" placeholder="Try earthquake, flood, Myanmar or reports" aria-controls="resourceList">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label" for="resourceCategory">Category</label>
+                            <select class="form-select" id="resourceCategory">
+                                <option value="all">All categories</option>
+                                <option value="science">Hazard science</option>
+                                <option value="safety">Safety guidance</option>
+                                <option value="maps">Maps and regions</option>
+                                <option value="planning">Household planning</option>
+                                <option value="reports">Reports and data</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <p class="result-count" id="resourceCount" role="status"></p>
+                <div class="resource-list" id="resourceList"></div>
+                <div class="empty-message" id="resourceEmpty" hidden>
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <h3>No matching resources</h3>
+                    <p>Try another search word or choose a different category.</p>
+                    <button class="btn btn-outline-sage" type="button" id="resetResources">Clear filters</button>
+                </div>
+                <div class="info-note mt-4">
+                    <i class="bi bi-info-circle" aria-hidden="true"></i>
+                    <p class="mb-0">Some resources explain safety procedures used in other countries. Use them for education, but always follow relevant local emergency instructions in Myanmar.</p>
+                </div>
+                <noscript>
+                    <p class="info-note mt-4">Enable JavaScript to search these resources. You can also visit <a href="https://themimu.info/">MIMU</a> for Myanmar-related information.</p>
+                </noscript>
+            </div>
+        </section>
+        <section class="research-section" id="research-data">
+            <div class="container">
+                <div class="row g-4 align-items-start" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">PUBLISHED RESEARCH & EVIDENCE</p>
+                        <h2>What real disasters in Myanmar can teach us.</h2>
+                        <p>Our project uses secondary research: information already published by organisations such as the United Nations, humanitarian agencies, scientific institutions and Myanmar mapping services.</p>
+                        <p>These reports document the scale of major disasters and show why evacuation planning, early warnings, safe shelter and community preparedness matter.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="research-intro-note">
+                            <i class="bi bi-journal-check" aria-hidden="true"></i>
+                            <h3>How to read the figures</h3>
+                            <p>Each number belongs to a specific event and reporting date. Estimates can change as new information becomes available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-table-wrap mt-4" data-aos="fade-up">
+                    <table class="table research-table mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">Event</th>
+                                <th scope="col">Reported figure</th>
+                                <th scope="col">What the figure describes</th>
+                                <th scope="col">Original source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Cyclone Nargis</strong>
+                                    <span>2–3 May 2008</span>
+                                </td>
+                                <td><strong class="data-value">~2.4 million</strong></td>
+                                <td>People affected by the cyclone in Myanmar. The UN also reported approximately 140,000 people dead or unaccounted for.</td>
+                                <td><a href="https://myanmar.un.org/en/21807-statement-united-nations-resident-and-humanitarian-coordinator-myanmar-knut-ostby-ten-years" target="_blank" rel="noopener noreferrer">UN, 2 May 2018 <i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>September Floods</strong>
+                                    <span>September 2024</span>
+                                </td>
+                                <td><strong class="data-value">~1 million</strong></td>
+                                <td>Estimated people affected across 70 townships as of 26 September 2024, following heavy monsoon rains and the remnants of Typhoon Yagi.</td>
+                                <td><a href="https://myanmar.un.org/en/279958-myanmar-flood-situation-report-3-27-september-2024" target="_blank" rel="noopener noreferrer">OCHA, 27 Sep 2024 <i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Mandalay Earthquake</strong>
+                                    <span>28 March 2025</span>
+                                </td>
+                                <td><strong class="data-value">7.7</strong><span class="data-unit">Magnitude</span></td>
+                                <td>A major earthquake struck central Myanmar. Around 9.1 million people lived in the hardest-hit areas identified in an OCHA report dated 7 April 2025.</td>
+                                <td><a href="https://myanmar.un.org/en/292288-ocha-myanmar-earthquake-humanitarian-snapshot" target="_blank" rel="noopener noreferrer">OCHA, 7 Apr 2025 <i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-caption mt-3">Figures refer to different events and measure different things. They should not be added together or treated as directly comparable. These are historical reports, not current emergency alerts.</p>
+                <div class="evidence-comparison mt-5" data-aos="fade-up">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <p class="eyebrow">UNDERSTANDING THE NUMBERS</p>
+                            <h3>Two examples of populations affected.</h3>
+                            <p>This visual compares the published estimates of people affected by Cyclone Nargis and the September 2024 floods. It does not measure the likelihood of a future disaster.</p>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="comparison-chart">
+                                <div class="comparison-item">
+                                    <div class="comparison-heading">
+                                        <span>Cyclone Nargis (2008)</span>
+                                        <strong>~2.4 million</strong>
+                                    </div>
+                                    <div class="comparison-track"><span class="comparison-fill nargis-fill"></span></div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-heading">
+                                        <span>September floods (2024)</span>
+                                        <strong>~1 million</strong>
+                                    </div>
+                                    <div class="comparison-track"><span class="comparison-fill floods-fill"></span></div>
+                                </div>
+                                <p class="comparison-note mb-0">The figures come from reports issued in different years and reflect their respective reporting methods and dates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="research-findings">
+            <div class="container">
+                <div class="section-heading mb-4" data-aos="fade-up">
+                    <p class="eyebrow">ANALYSING THE EVIDENCE</p>
+                    <h2>What can we learn from these events?</h2>
+                    <p>These observations connect published disaster reports with practical preparedness. They are interpretations of the evidence rather than predictions.</p>
+                </div>
+                <div class="findings-list">
+                    <article class="finding-item" data-aos="fade-up">
+                        <div class="finding-number">01</div>
+                        <div>
+                            <h3>Coastal communities need evacuation plans.</h3>
+                            <p>Cyclone Nargis caused severe destruction in the Ayeyarwady Delta and Yangon Region. Its impacts demonstrate the danger of powerful winds, storm surges and coastal flooding. Communities in exposed areas benefit from accessible evacuation information, safer shelter and communication plans.</p>
+                            <a href="https://myanmar.un.org/en/21807-statement-united-nations-resident-and-humanitarian-coordinator-myanmar-knut-ostby-ten-years" target="_blank" rel="noopener noreferrer">Read the UN report <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="finding-item" data-aos="fade-up">
+                        <div class="finding-number">02</div>
+                        <div>
+                            <h3>Flooding affects much more than buildings.</h3>
+                            <p>Reports on the September 2024 floods described damage to farmland, roads, bridges and essential services. Flood preparedness therefore includes more than protecting a house: people also need plans for drinking water, transport, medication and temporary accommodation.</p>
+                            <a href="https://myanmar.un.org/en/279958-myanmar-flood-situation-report-3-27-september-2024" target="_blank" rel="noopener noreferrer">Read the flood situation report <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="finding-item" data-aos="fade-up">
+                        <div class="finding-number">03</div>
+                        <div>
+                            <h3>Earthquake preparedness must consider infrastructure.</h3>
+                            <p>The March 2025 earthquake damaged homes, schools, hospitals and other important facilities. Preparedness should therefore include safe actions during shaking, household emergency supplies, communication arrangements and awareness of the risks from damaged buildings and disrupted services.</p>
+                            <a href="https://myanmar.un.org/en/292288-ocha-myanmar-earthquake-humanitarian-snapshot" target="_blank" rel="noopener noreferrer">Read the earthquake snapshot <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="research-method-section" id="research-method">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-lg-5" data-aos="fade-up">
+                        <p class="eyebrow">OUR RESEARCH APPROACH</p>
+                        <h2>How we use published information.</h2>
+                        <p>Good research means looking beyond a headline or a single number. It requires checking sources, understanding how figures were measured and explaining the limitations of the available evidence.</p>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-up">
+                        <div class="method-list">
+                            <div class="method-step">
+                                <span>01</span>
+                                <div>
+                                    <h3>Select relevant sources</h3>
+                                    <p>Prioritise official scientific information, UN reports, humanitarian situation updates and established Myanmar mapping resources.</p>
+                                </div>
+                            </div>
+                            <div class="method-step">
+                                <span>02</span>
+                                <div>
+                                    <h3>Record dates and definitions</h3>
+                                    <p>Identify when the disaster occurred, when the report was published and whether a figure measures affected people, displacement, deaths or another impact.</p>
+                                </div>
+                            </div>
+                            <div class="method-step">
+                                <span>03</span>
+                                <div>
+                                    <h3>Compare carefully</h3>
+                                    <p>Affected population estimates from different events may use different methods. We avoid combining figures that represent different measures.</p>
+                                </div>
+                            </div>
+                            <div class="method-step">
+                                <span>04</span>
+                                <div>
+                                    <h3>Explain the limitations</h3>
+                                    <p>Access difficulties, incomplete reporting and changing estimates can affect disaster statistics. We provide links so readers can examine the original evidence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <p class="eyebrow" data-aos="fade-up">ABOUT OUR INFORMATION</p>
+                <h2 data-aos="fade-up">Useful things to know.</h2>
+                <div class="accordion mt-4" id="resourceQuestions">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#checkSource" aria-expanded="true" aria-controls="checkSource">How can I tell whether a source is reliable?</button>
+                        </h3>
+                        <div class="accordion-collapse collapse show" id="checkSource" data-bs-parent="#resourceQuestions">
+                            <div class="accordion-body">Check who published the information, when it was updated, what evidence it uses and which location it describes. For important claims, compare several trustworthy sources and look for original reports rather than unsupported statements.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryResearch" aria-expanded="false" aria-controls="secondaryResearch">What is secondary research?</button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="secondaryResearch" data-bs-parent="#resourceQuestions">
+                            <div class="accordion-body">Secondary research uses information that has already been collected and published by others, such as scientific studies, government documents, maps and humanitarian reports. Readers should be able to identify the original source and reporting date.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#differentFigures" aria-expanded="false" aria-controls="differentFigures">Why do disaster reports sometimes give different numbers?</button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="differentFigures" data-bs-parent="#resourceQuestions">
+                            <div class="accordion-body">Early reports may contain estimates because communication, transport and access to affected locations are difficult. Later assessments may change the figures. Organisations may also use different definitions for people affected, displaced or in need of assistance.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#savedData" aria-expanded="false" aria-controls="savedData">Where is my household checklist saved?</button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="savedData" data-bs-parent="#resourceQuestions">
+                            <div class="accordion-body">Your checklist is saved in this browser on this device. It does not automatically synchronise between devices. Clearing browser data may remove your progress. Website accounts are demonstrations rather than a full online account service.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectPurpose" aria-expanded="false" aria-controls="projectPurpose">Who created Ready Myanmar?</button>
+                        </h3>
+                        <div class="accordion-collapse collapse" id="projectPurpose" data-bs-parent="#resourceQuestions">
+                            <div class="accordion-body">Ready Myanmar is a Year 9 Fuchsia student project focused on understanding disaster risks in Myanmar and promoting practical preparedness through educational information and interactive tools.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="learning-banner mt-5" data-aos="fade-up">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <p class="eyebrow">PUT YOUR LEARNING INTO PRACTICE</p>
+                            <h2>Knowledge helps us prepare.</h2>
+                            <p class="mb-0">Turn what you have learned into a household preparation plan.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <a class="btn btn-cream" href="Prepare.html">Prepare your household <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="index.html">
+                        <img src="images/ready-myanmar-logo.png" alt="" width="46" height="46">
+                        <span>Ready <strong>Myanmar</strong></span>
+                    </a>
+                    <p class="mt-4">Know the hazards. Be better prepared.</p>
+                    <p>Ready Myanmar helps communities understand local disaster risks and take practical steps to prepare.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="index.html#about-us">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Disaster Types</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="UnderstandTR.html#earthquakes">Earthquakes</a></li>
+                        <li><a href="UnderstandTR.html#landslides">Landslides</a></li>
+                        <li><a href="UnderstandTR.html#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="UnderstandTR.html#tsunamis">Tsunamis</a></li>
+                        <li><a href="UnderstandTR.html#flooding">Flooding</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3>Regions</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="ExploreRG.html#yangon">Yangon</a></li>
+                        <li><a href="ExploreRG.html#bago">Bago</a></li>
+                        <li><a href="ExploreRG.html#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="ExploreRG.html#mon">Mon</a></li>
+                        <li><a href="ExploreRG.html#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">© 2026 Ready Myanmar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="eyebrow mb-2">READY MYANMAR</p>
+                        <h2 class="modal-title" id="authTitle">Welcome back.</h2>
+                    </div>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close account form"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="auth-note">School demonstration: accounts are saved in this browser only. Please use a made-up password.</p>
+                    <div class="auth-stage">
+                        <div class="auth-panel" id="authPanel">
+                            <div id="loginPanel">
+                                <form id="loginForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginEmail">Email address</label>
+                                        <input class="form-control" id="loginEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginPassword">Password</label>
+                                        <input class="form-control" id="loginPassword" type="password" autocomplete="current-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showLoginPassword" type="checkbox">
+                                        <label class="form-check-label" for="showLoginPassword">Show password</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="loginSubmit" type="submit">Log in</button>
+                                    <p class="auth-switch">New here? <button class="switch-button" id="switchToSignup" type="button">Create an account</button></p>
+                                </form>
+                            </div>
+                            <div id="signupPanel" hidden>
+                                <form id="signupForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupName">Your name</label>
+                                        <input class="form-control" id="signupName" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupEmail">Email address</label>
+                                        <input class="form-control" id="signupEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupPassword">Password</label>
+                                        <input class="form-control" id="signupPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" aria-describedby="passwordHelp" required>
+                                        <p class="password-help" id="passwordHelp">At least 8 characters, including a special character such as ! @ # $ %</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="confirmPassword">Confirm password</label>
+                                        <input class="form-control" id="confirmPassword" type="password" autocomplete="new-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showSignupPassword" type="checkbox">
+                                        <label class="form-check-label" for="showSignupPassword">Show passwords</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="signupSubmit" type="submit">Create account</button>
+                                    <p class="auth-switch">Already have an account? <button class="switch-button" id="switchToLogin" type="button">Log in</button></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="resources.js"></script>
+</body>
+</html>

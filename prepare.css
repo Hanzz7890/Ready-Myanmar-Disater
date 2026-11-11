@@ -1,0 +1,210 @@
+
+@import url("style.css");
+.page-hero {
+    padding: 65px 0;
+    background-color: #E5ECE4;
+    background-image:
+        linear-gradient(
+            90deg,
+            #F5F4EF 0%,
+            rgba(245, 244, 239, 0.98) 35%,
+            rgba(245, 244, 239, 0.88) 55%,
+            rgba(245, 244, 239, 0.2) 80%,
+            rgba(245, 244, 239, 0.08) 100%
+        ),
+        url("images/Prepare\ bg\ hero");
+    background-position: center, center right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #D4DCD3;
+}
+.page-hero h1 {
+    max-width: 650px;
+    margin-bottom: 18px;
+    color: #293832;
+    font-size: 44px;
+}
+.page-hero .hero-description {
+    max-width: 580px;
+    color: #43554B;
+    font-size: 17px;
+}
+.page-hero .eyebrow,
+.page-hero .breadcrumb a {
+    color: #426558;
+}
+.page-hero .breadcrumb-item.active {
+    color: #43554B;
+}
+@media (max-width: 991px) {
+    .page-hero {
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(245, 244, 239, 0.97),
+                rgba(245, 244, 239, 0.85)
+            ),
+            url("images/Prepare\ bg\ hero");
+    }
+}
+@media (max-width: 767px) {
+    .page-hero {
+        padding: 40px 0;
+        background-image:
+            linear-gradient(
+                rgba(245, 244, 239, 0.93),
+                rgba(229, 236, 228, 0.94)
+            ),
+            url("images/prepare-background.jpg");
+        background-position: center;
+    }
+    .page-hero h1 {
+        font-size: 34px;
+    }
+    .page-hero .hero-description {
+        font-size: 16px;
+    }
+}
+.breadcrumb {
+    margin-bottom: 24px;
+    font-size: 13px;
+}
+.breadcrumb-item.active {
+    color: #526159;
+}
+.prepare-section {
+    padding: 55px 0;
+}
+.section-title {
+    font-size: 32px;
+}
+.prepare-card {
+    border: 1px solid #D4DCD3;
+    border-radius: 18px;
+    background-color: #FDFCF8;
+    color: #293832;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.prepare-card:hover {
+    border-color: #426558;
+    box-shadow: 0 8px 24px rgba(41, 56, 50, 0.09);
+    transform: translateY(-3px);
+}
+.prepare-card h2 {
+    font-size: 27px;
+    line-height: 1.3;
+}
+.prepare-card p {
+    margin-bottom: 24px;
+    color: #526159;
+    font-size: 15px;
+}
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background-color: #E5ECE4;
+    color: #426558;
+    font-size: 27px;
+}
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #426558;
+    font-size: 14px;
+    font-weight: 700;
+}
+.text-link:hover {
+    color: #293832;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.info-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-left: 4px solid #426558;
+    border-radius: 6px;
+    background-color: #E5ECE4;
+    color: #293832;
+}
+.info-note > i {
+    color: #426558;
+    font-size: 22px;
+}
+.info-note p {
+    font-size: 14px;
+}
+.conversation-box {
+    padding: 35px;
+    border-radius: 18px;
+    background-color: #30443C;
+    color: #FFFFFF;
+}
+.conversation-box .eyebrow {
+    color: #DDE7DC;
+}
+.conversation-box h2 {
+    font-size: 28px;
+}
+.conversation-question {
+    max-width: 680px;
+    font-size: 16px;
+}
+.conversation-box button:focus-visible {
+    outline-color: #FFFFFF;
+}
+.source-links {
+    margin-top: 35px;
+    padding-top: 24px;
+    border-top: 1px solid #D4DCD3;
+}
+.source-links h3 {
+    font-size: 17px;
+}
+.source-links a {
+    color: #426558;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.source-links a:hover {
+    color: #293832;
+}
+@media (max-width: 767px) {
+    .page-hero,
+    .prepare-section {
+        padding: 40px 0;
+    }
+    .page-hero h1 {
+        font-size: 34px;
+    }
+    .hero-description {
+        font-size: 16px;
+    }
+    .section-title {
+        font-size: 27px;
+    }
+    .prepare-card h2 {
+        font-size: 24px;
+    }
+    .conversation-box {
+        padding: 24px;
+    }
+    .conversation-box h2 {
+        font-size: 25px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .prepare-card {
+        transition: none;
+    }
+    .prepare-card:hover {
+        transform: none;
+    }
+}

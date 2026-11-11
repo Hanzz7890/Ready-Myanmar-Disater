@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Regions | Ready Myanmar</title>
+    <link rel="icon" type="image/png" href="images/ready-myanmar-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="regions.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+    <nav class="navbar navbar-expand-xl sticky-top border-bottom py-3"
+        aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2"
+                href="index.html">
+                <img class="nav-logo"
+                    src="images/ready-myanmar-logo.png"
+                    alt=""
+                    width="40"
+                    height="40">
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+            <button class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto align-items-xl-center gap-xl-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">
+                            Understand the Risks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">
+                            Explore Regions
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Prepare
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2"></i>
+                                    Prepare overview
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Checklist.html">
+                                    <i class="bi bi-list-check me-2"></i>
+                                    Household checklist
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2"></i>
+                                    Safety guides
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">
+                            Resources
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-sage" href="SafetyGuides.html">
+                        Find Safety Guidance
+                    </a>
+                    <div class="account-actions" id="guestActions">
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="login">
+                            <i class="bi bi-person me-1"></i>
+                            Log in
+                        </button>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="signup">
+                            Sign up
+                        </button>
+                    </div>
+                    <div class="account-actions" id="memberActions" hidden>
+                        <span class="account-name">
+                            <i class="bi bi-person-check"></i>
+                            <span id="accountName"></span>
+                        </span>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            id="logoutButton">
+                            Log out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="mainContent">
+        <section class="page-hero">
+            <div class="container" data-aos="fade-up">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Explore Regions</li>
+                    </ol>
+                </nav>
+                <p class="eyebrow">READY MYANMAR</p>
+                <h1>Explore Regions</h1>
+                <p class="hero-description">Get to know the places in our Lower Myanmar project area. Explore regional information, the reasons behind common hazards and their effects on communities.</p>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <div class="region-heading mb-4" data-aos="fade-up">
+                    <p class="eyebrow">EXPLORE OUR PROJECT AREA</p>
+                    <h2>Different places. Different conditions.</h2>
+                    <p class="mb-0">Select an area on the map or choose a region from the dropdown to learn about local hazards, their causes, their impacts and reported statistics.</p>
+                </div>
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-6">
+                        <div class="map-panel" data-aos="fade-up">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="icon-box"><i class="bi bi-map" aria-hidden="true"></i></div>
+                                <div>
+                                    <h2 class="mb-1">Myanmar</h2>
+                                    <p class="small text-secondary mb-0">Five regions in our project</p>
+                                </div>
+                            </div>
+                            <object class="myanmar-map" id="myanmarMap" data="myanmar-regions.svg" type="image/svg+xml" aria-label="Myanmar map with five selectable project regions">
+                                <div class="map-fallback">
+                                    <i class="bi bi-map" aria-hidden="true"></i>
+                                    <p>The map could not load. Use the region selector to explore the information.</p>
+                                </div>
+                            </object>
+                            <div class="map-legend" aria-label="Map colour key">
+                                <span><span class="legend-dot project-dot"></span>Project region</span>
+                                <span><span class="legend-dot selected-dot"></span>Selected</span>
+                                <span><span class="legend-dot outside-dot"></span>Outside this page's coverage</span>
+                            </div>
+                            <p class="map-status mb-0" id="mapStatus" role="status">You can use the region selector while the map loads.</p>
+                        </div>
+                        <section class="landscape-guide" aria-labelledby="landscapeTitle">
+                            <div class="landscape-heading" data-aos="fade-up">
+                                <p class="eyebrow">LOOK BEYOND THE MAP</p>
+                                <h2 id="landscapeTitle">The landscape helps explain the risk.</h2>
+                                <p>A regional boundary does not tell the whole story. Rivers, slopes and coastlines help explain why nearby communities can experience different hazards.</p>
+                            </div>
+                            <div class="landscape-stories">
+                                <article class="landscape-story" data-aos="fade-up">
+                                    <figure class="landscape-photo">
+                                        <img src="images/region-river.jpg" alt="A river landscape and the surrounding land." loading="lazy">
+                                    </figure>
+                                    <div class="landscape-card">
+                                        <span class="landscape-number" aria-hidden="true">01</span>
+                                        <i class="bi bi-water landscape-icon" aria-hidden="true"></i>
+                                        <h3>Rivers and lowlands</h3>
+                                        <p>Water flows towards lower ground. When rivers rise beyond their banks, nearby floodplains can become covered by water.</p>
+                                        <details class="landscape-more">
+                                            <summary>Why location matters</summary>
+                                            <p>Rain falling upstream can contribute to flooding farther downstream. Local elevation and drainage also influence where water collects, so communities within the same region may face different conditions.</p>
+                                        </details>
+                                        <a class="landscape-link" href="UnderstandTR.html#flooding">Understand flooding</a>
+                                    </div>
+                                </article>
+                                <article class="landscape-story landscape-story-reverse" data-aos="fade-up">
+                                    <figure class="landscape-photo">
+                                        <img src="images/region-hillside.jpg" alt="A hillside illustrating steep terrain and slope conditions." loading="lazy">
+                                    </figure>
+                                    <div class="landscape-card">
+                                        <span class="landscape-number" aria-hidden="true">02</span>
+                                        <i class="bi bi-triangle landscape-icon" aria-hidden="true"></i>
+                                        <h3>Hills and slopes</h3>
+                                        <p>Gravity pulls soil and rock downhill. Rainfall, shaking or changes to a slope can reduce its stability and trigger movement.</p>
+                                        <details class="landscape-more">
+                                            <summary>Why conditions matter</summary>
+                                            <p>Slope steepness, rock and soil properties, drainage and excavation all influence stability. A mountain location alone does not establish the risk at a particular house or road.</p>
+                                        </details>
+                                        <a class="landscape-link" href="UnderstandTR.html#landslides">Understand landslides</a>
+                                    </div>
+                                </article>
+                                <article class="landscape-story" data-aos="fade-up">
+                                    <figure class="landscape-photo">
+                                        <img src="images/region-coast.jpg" alt="A coastal landscape where land meets the sea." loading="lazy">
+                                    </figure>
+                                    <div class="landscape-card">
+                                        <span class="landscape-number" aria-hidden="true">03</span>
+                                        <i class="bi bi-cloud-rain landscape-icon" aria-hidden="true"></i>
+                                        <h3>Coasts and deltas</h3>
+                                        <p>Low-lying coastal land can be exposed to seawater flooding. Storm winds can push water towards the shore and raise coastal water levels.</p>
+                                        <details class="landscape-more">
+                                            <summary>Different hazards, different causes</summary>
+                                            <p>Storm surge is driven by a storm. A tsunami comes from sudden water displacement, often associated with an earthquake. Coastal shape and land elevation influence how either event affects a location.</p>
+                                        </details>
+                                        <a class="landscape-link" href="UnderstandTR.html#tsunamis">Understand tsunamis</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="landscape-sources">
+                                <p>Explore the science behind these landscapes:</p>
+                                <a href="https://www.weather.gov/safety/flood-hazards" target="_blank" rel="noopener noreferrer">NWS: Flood hazards</a>
+                                <a href="https://www.usgs.gov/programs/landslide-hazards/what-are-landslides-how-can-they-affect-me" target="_blank" rel="noopener noreferrer">USGS: Landslides</a>
+                                <a href="https://www.noaa.gov/jetstream/tsunamis" target="_blank" rel="noopener noreferrer">NOAA: Tsunamis</a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="region-selector" data-aos="fade-up">
+                            <label class="form-label" for="regionSelect">Choose a region</label>
+                            <select class="form-select" id="regionSelect" aria-controls="regionalPanels">
+                                <option value="yangon">Yangon</option>
+                                <option value="bago">Bago</option>
+                                <option value="ayeyarwady">Ayeyarwady</option>
+                                <option value="mon">Mon</option>
+                                <option value="tanintharyi">Tanintharyi</option>
+                            </select>
+                            <p class="visually-hidden" id="selectionStatus" role="status"></p>
+                        </div>
+                        <div id="regionalPanels">
+                            <article class="region-panel mt-4" data-region-panel="yangon" data-map-id="MM06" aria-labelledby="yangonTitle">
+                                <div class="region-title-row">
+                                    <div>
+                                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                                        <h2 id="yangonTitle">Yangon</h2>
+                                    </div>
+                                    <div class="icon-box"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                                </div>
+                                <p class="region-introduction">Yangon is a coastal region in southern Myanmar, with urban areas, waterways and low-lying land.</p>
+                                <div class="region-detail">
+                                    <h3>Hazards to explore</h3>
+                                    <div class="region-tags">
+                                        <a href="UnderstandTR.html#flooding"><i class="bi bi-cloud-rain-heavy"></i>Flooding</a>
+                                    </div>
+                                </div>
+                                <div class="region-detail">
+                                    <h3>Example from available reports</h3>
+                                    <p>The IFRC report on Myanmar's 2023 floods describes affected communities in Taik Kyi, Hlegu and Hmawbi townships.</p>
+                                    <a class="text-link" href="https://www.themimu.info/sites/themimu.info/files/documents/Report_DREF_Final_Report_-_Myanmar_Flood_2023_IFRC.pdf" target="_blank" rel="noopener noreferrer">Read the source</a>
+                                </div>
+                                <p class="evidence-context">These figures describe individual incidents or regional context, not rankings of disaster frequency.</p>
+                                <div class="region-actions">
+                                    <a class="btn btn-sage" href="SafetyGuides.html">Open safety guides</a>
+                                    <a class="btn btn-outline-sage" href="Checklist.html">My checklist</a>
+                                </div>
+                                <section class="region-evidence">
+                                    <p class="eyebrow">WHY HERE?</p>
+                                    <h3>Why flooding is a concern in Yangon</h3>
+                                    <p>Yangon has densely populated neighbourhoods, low-lying land, tidal waterways and a rainy monsoon season. These conditions can allow water to accumulate or slow its drainage. However, flood risk varies between townships and neighbourhoods.</p>
+                                    <div class="region-stat-grid" aria-label="Selected figures for Yangon">
+                                        <div class="region-stat">
+                                            <strong>3 townships</strong>
+                                            <span>Taik Kyi, Hlegu and Hmawbi mentioned in an IFRC 2023 flood report</span>
+                                        </div>
+                                        <div class="region-stat">
+                                            <strong>889/km²</strong>
+                                            <span>Estimated regional population density in 2023, according to MIMU's UNFPA projections</span>
+                                        </div>
+                                    </div>
+                                    <p class="stat-note">Historical and population data, not a live warning.</p>
+                                    <h3>Three factors to explore</h3>
+                                    <div class="region-reasons">
+                                        <details class="region-reason" open>
+                                            <summary>01. Heavy monsoon rainfall</summary>
+                                            <p>During the monsoon, intense rain can fall faster than drains and soil can absorb it. Water collects on streets, around houses and on paved areas where infiltration is limited. Prolonged rainfall also saturates the ground, reducing its ability to absorb additional water.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>02. Rising rivers and high tides</summary>
+                                            <p>Communities near rivers and creeks can experience flooding when water levels rise. High tides may slow drainage into tidal waterways, allowing rainwater to remain in low-lying areas for longer. The effect depends on the location and timing of rainfall.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>03. Urban development and drainage</summary>
+                                            <p>Roads, rooftops and other hard surfaces prevent water from entering the soil. As a result, more water flows towards drainage systems. Where drains are blocked or cannot handle heavy rainfall, floodwater can accumulate around homes and businesses.</p>
+                                        </details>
+                                    </div>
+                                    <h3>How people and communities are affected</h3>
+                                    <p>Floodwater can damage household belongings, interrupt school attendance and block roads used for work, healthcare and daily travel. A single flooded road may affect many people because Yangon has a high concentration of residents and businesses.</p>
+                                    <p>Floodwater can also contaminate water supplies and create sanitation problems. Families living in low-lying areas may experience repeated disruptions, but the severity depends on housing conditions, local drainage and access to support.</p>
+                                    <a class="region-evidence-source" href="https://themimu.info/states_regions/yangon" target="_blank" rel="noopener noreferrer">MIMU: Yangon Region profile</a>
+                                </section>
+                            </article>
+                            <article class="region-panel mt-4" data-region-panel="bago" data-map-id="MM02" aria-labelledby="bagoTitle" hidden>
+                                <div class="region-title-row">
+                                    <div>
+                                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                                        <h2 id="bagoTitle">Bago</h2>
+                                    </div>
+                                    <div class="icon-box"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                                </div>
+                                <p class="region-introduction">Bago lies north of Yangon. Local conditions differ between river plains, towns and hill areas.</p>
+                                <div class="region-detail">
+                                    <h3>Hazards to explore</h3>
+                                    <div class="region-tags">
+                                        <a href="UnderstandTR.html#flooding"><i class="bi bi-cloud-rain-heavy"></i>Flooding</a>
+                                        <a href="UnderstandTR.html#earthquakes"><i class="bi bi-activity"></i>Earthquakes</a>
+                                    </div>
+                                </div>
+                                <div class="region-detail">
+                                    <h3>Example from available reports</h3>
+                                    <p>MIMU's regional profile records impacts from the 2024 floods and the March 2025 earthquake.</p>
+                                    <a class="text-link" href="https://www.themimu.info/states_regions/bago" target="_blank" rel="noopener noreferrer">Read the source</a>
+                                </div>
+                                <p class="evidence-context">These figures describe individual incidents or regional context, not rankings of disaster frequency.</p>
+                                <div class="region-actions">
+                                    <a class="btn btn-sage" href="SafetyGuides.html">Open safety guides</a>
+                                    <a class="btn btn-outline-sage" href="Checklist.html">My checklist</a>
+                                </div>
+                                <section class="region-evidence">
+                                    <p class="eyebrow">WHY HERE?</p>
+                                    <h3>Why river flooding and earthquakes matter in Bago</h3>
+                                    <p>Bago includes river plains, agricultural areas and higher terrain. Heavy monsoon rainfall and rising rivers create recurring flood concerns, while earthquakes are a separate geological hazard associated with fault movement.</p>
+                                    <div class="region-stat-grid" aria-label="Selected figures for Bago">
+                                        <div class="region-stat">
+                                            <strong>100,000+</strong>
+                                            <span>People reported severely affected by flooding across Bago in September 2024</span>
+                                        </div>
+                                        <div class="region-stat">
+                                            <strong>6 townships</strong>
+                                            <span>Bago townships covered by the September 2024 UN report</span>
+                                        </div>
+                                    </div>
+                                    <p class="stat-note">UN report dated 22 September 2024, not an annual average.</p>
+                                    <h3>Three factors to explore</h3>
+                                    <div class="region-reasons">
+                                        <details class="region-reason" open>
+                                            <summary>01. Heavy rain feeding rivers</summary>
+                                            <p>Rain falling across a large catchment flows into streams and rivers. During prolonged monsoon rainfall, river levels can rise beyond their banks. Water can then spread onto nearby plains and settlements, including places where local rainfall is not especially intense.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>02. Flat farmland and slow drainage</summary>
+                                            <p>Floodwater can spread across low-lying agricultural areas and remain there when drainage is slow. Farms, roads and villages close to river channels may be affected together, increasing damage to crops, transport and household livelihoods.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>03. Earthquake shaking</summary>
+                                            <p>Movement along geological faults releases energy that shakes the ground. Local soil conditions and building construction influence the severity of damage. This is a different process from flooding, although both hazards can affect the same community.</p>
+                                        </details>
+                                    </div>
+                                    <h3>How people and communities are affected</h3>
+                                    <p>Floods can damage homes, rice fields, stored crops and agricultural equipment. When roads or bridges become impassable, families may struggle to reach markets, schools or medical care. Farmers can lose income even after floodwater recedes.</p>
+                                    <p>Earthquakes may separately damage buildings, roads and water pipes. In September 2024, a UN report estimated that more than 100,000 people were severely affected by flooding across six Bago townships, showing the scale of one reported event rather than a typical year.</p>
+                                    <a class="region-evidence-source" href="https://myanmar.un.org/en/280006-myanmar-flash-flood-update-no-2" target="_blank" rel="noopener noreferrer">United Nations: Flood Flash Update, September 2024</a>
+                                </section>
+                            </article>
+                            <article class="region-panel mt-4" data-region-panel="ayeyarwady" data-map-id="MM07" aria-labelledby="ayeyarwadyTitle" hidden>
+                                <div class="region-title-row">
+                                    <div>
+                                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                                        <h2 id="ayeyarwadyTitle">Ayeyarwady</h2>
+                                    </div>
+                                    <div class="icon-box"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                                </div>
+                                <p class="region-introduction">Ayeyarwady includes the delta region, river channels, agricultural land and low-lying coastal areas.</p>
+                                <div class="region-detail">
+                                    <h3>Hazards to explore</h3>
+                                    <div class="region-tags">
+                                        <a href="UnderstandTR.html#flooding"><i class="bi bi-cloud-rain-heavy"></i>Flooding</a>
+                                    </div>
+                                </div>
+                                <div class="region-detail">
+                                    <h3>Example from available reports</h3>
+                                    <p>MIMU describes exposure to flooding and storm surges. The region was severely affected by Cyclone Nargis in 2008.</p>
+                                    <a class="text-link" href="https://www.themimu.info/states_regions/ayeyarwady" target="_blank" rel="noopener noreferrer">Read the source</a>
+                                </div>
+                                <p class="evidence-context">These figures describe individual incidents or regional context, not rankings of disaster frequency.</p>
+                                <div class="region-actions">
+                                    <a class="btn btn-sage" href="SafetyGuides.html">Open safety guides</a>
+                                    <a class="btn btn-outline-sage" href="Checklist.html">My checklist</a>
+                                </div>
+                                <section class="region-evidence">
+                                    <p class="eyebrow">WHY HERE?</p>
+                                    <h3>Why the Ayeyarwady Delta faces flooding and storm surges</h3>
+                                    <p>Ayeyarwady includes low-lying delta land, river channels and coastal communities. River flooding and seawater flooding are different processes, but both can affect homes and livelihoods in the delta.</p>
+                                    <div class="region-stat-grid" aria-label="Selected figures for Ayeyarwady">
+                                        <div class="region-stat">
+                                            <strong>7 townships</strong>
+                                            <span>Ayeyarwady townships highlighted as heavily hit by Cyclone Nargis in 2008</span>
+                                        </div>
+                                        <div class="region-stat">
+                                            <strong>2.4 million</strong>
+                                            <span>People affected by Cyclone Nargis across Myanmar, not Ayeyarwady alone</span>
+                                        </div>
+                                    </div>
+                                    <p class="stat-note">Historical Cyclone Nargis figures reported in 2008.</p>
+                                    <h3>Three factors to explore</h3>
+                                    <div class="region-reasons">
+                                        <details class="region-reason" open>
+                                            <summary>01. Low-lying delta geography</summary>
+                                            <p>Much of the delta is flat and close to sea level. When rivers carry large volumes of monsoon rainwater, floodwater can spread over farmland and settlements. Water may also drain slowly because of the area's low elevation.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>02. Cyclones and storm surges</summary>
+                                            <p>Strong cyclone winds can push seawater towards the coast, raising coastal water levels. This is called storm surge and is different from a tsunami. Storm surges may be particularly damaging when combined with high tides and heavy rainfall.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>03. Farming and river-based livelihoods</summary>
+                                            <p>Many communities rely on rice farming, fishing and water transport. These activities often take place close to rivers and coastal areas, so flooding can harm homes, farmland, equipment and access to markets simultaneously.</p>
+                                        </details>
+                                    </div>
+                                    <h3>How people and communities are affected</h3>
+                                    <p>Floodwater and storm surges can destroy crops, damage homes and contaminate freshwater supplies. Fishing boats, livestock and agricultural equipment may also be lost, making it difficult for families to resume their livelihoods.</p>
+                                    <p>Cyclone Nargis in 2008 demonstrated these risks. An Asian Development Bank report described extensive damage in seven Ayeyarwady townships and estimated around 2.4 million people affected across the cyclone-hit areas of Myanmar overall.</p>
+                                    <a class="region-evidence-source" href="https://www.adb.org/documents/myanmar-update-country-developments" target="_blank" rel="noopener noreferrer">Asian Development Bank: Cyclone Nargis, 2008</a>
+                                </section>
+                            </article>
+                            <article class="region-panel mt-4" data-region-panel="mon" data-map-id="MM15" aria-labelledby="monTitle" hidden>
+                                <div class="region-title-row">
+                                    <div>
+                                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                                        <h2 id="monTitle">Mon</h2>
+                                    </div>
+                                    <div class="icon-box"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                                </div>
+                                <p class="region-introduction">Mon State is in southeastern Myanmar and has a coastline along the Andaman Sea.</p>
+                                <div class="region-detail">
+                                    <h3>Hazards to explore</h3>
+                                    <div class="region-tags">
+                                        <a href="UnderstandTR.html#flooding"><i class="bi bi-cloud-rain-heavy"></i>Flooding</a>
+                                        <a href="UnderstandTR.html#earthquakes"><i class="bi bi-activity"></i>Earthquakes</a>
+                                    </div>
+                                </div>
+                                <div class="region-detail">
+                                    <h3>Example from available reports</h3>
+                                    <p>MIMU's profile reports impacts from Typhoon Yagi-related flooding in 2024 and the March 2025 earthquake.</p>
+                                    <a class="text-link" href="https://www.themimu.info/states_regions/mon" target="_blank" rel="noopener noreferrer">Read the source</a>
+                                </div>
+                                <p class="evidence-context">These figures describe individual incidents or regional context, not rankings of disaster frequency.</p>
+                                <div class="region-actions">
+                                    <a class="btn btn-sage" href="SafetyGuides.html">Open safety guides</a>
+                                    <a class="btn btn-outline-sage" href="Checklist.html">My checklist</a>
+                                </div>
+                                <section class="region-evidence">
+                                    <p class="eyebrow">WHY HERE?</p>
+                                    <h3>Why Mon State faces flooding and earthquake risks</h3>
+                                    <p>Mon State contains coastal land, river systems and hilly areas. Heavy rainfall can cause different types of flooding across this landscape, while earthquake risk comes from geological processes beneath the ground.</p>
+                                    <div class="region-stat-grid" aria-label="Selected figures for Mon">
+                                        <div class="region-stat">
+                                            <strong>US$25m</strong>
+                                            <span>Estimated economic damage in Mon from the March 2025 earthquake, reported by MIMU from World Bank data</span>
+                                        </div>
+                                        <div class="region-stat">
+                                            <strong>10 townships</strong>
+                                            <span>Townships in Mon State, according to MIMU's regional profile</span>
+                                        </div>
+                                    </div>
+                                    <p class="stat-note">The earthquake figure measures estimated economic damage, not casualties.</p>
+                                    <h3>Three factors to explore</h3>
+                                    <div class="region-reasons">
+                                        <details class="region-reason" open>
+                                            <summary>01. Monsoon and storm-related rainfall</summary>
+                                            <p>Heavy monsoon rainfall and rain associated with tropical weather systems increase water flowing into streams and rivers. Low-lying areas can experience flooding when waterways overflow or drainage is overwhelmed.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>02. Hilly terrain and runoff</summary>
+                                            <p>Rainwater can travel quickly downhill in steep terrain. Where soil becomes saturated, slope stability may decrease. Some communities may face fast-moving runoff or landslides, depending on the local ground conditions.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>03. Geological fault movement</summary>
+                                            <p>Earthquakes happen when energy is released through sudden movement along faults. The effects depend on distance, ground properties and building strength. Coastal location alone does not determine earthquake risk.</p>
+                                        </details>
+                                    </div>
+                                    <h3>How people and communities are affected</h3>
+                                    <p>Flooding can block roads, damage farmland and affect drinking-water supplies. These disruptions may prevent people from reaching schools, hospitals and workplaces even when their own homes are not flooded.</p>
+                                    <p>Mon was affected by flooding linked to Typhoon Yagi in 2024. MIMU also cites a World Bank estimate of US$25 million in economic damage in Mon State from the earthquake on 28 March 2025, illustrating how different hazards can affect the same region.</p>
+                                    <a class="region-evidence-source" href="https://www.themimu.info/states_regions/mon" target="_blank" rel="noopener noreferrer">MIMU: Mon State profile</a>
+                                </section>
+                            </article>
+                            <article class="region-panel mt-4" data-region-panel="tanintharyi" data-map-id="MM05" aria-labelledby="tanintharyiTitle" hidden>
+                                <div class="region-title-row">
+                                    <div>
+                                        <p class="eyebrow">REGIONAL SPOTLIGHT</p>
+                                        <h2 id="tanintharyiTitle">Tanintharyi</h2>
+                                    </div>
+                                    <div class="icon-box"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+                                </div>
+                                <p class="region-introduction">Tanintharyi is in southern Myanmar. This project includes examples from its flood-affected and landslide-affected communities.</p>
+                                <div class="region-detail">
+                                    <h3>Hazards to explore</h3>
+                                    <div class="region-tags">
+                                        <a href="UnderstandTR.html#flooding"><i class="bi bi-cloud-rain-heavy"></i>Flooding</a>
+                                        <a href="UnderstandTR.html#landslides"><i class="bi bi-triangle"></i>Landslides</a>
+                                    </div>
+                                </div>
+                                <div class="region-detail">
+                                    <h3>Example from available reports</h3>
+                                    <p>MIMU's 2026 flood collection includes maps of flood-affected villages and landslide areas in the region.</p>
+                                    <a class="text-link" href="https://themimu.info/emergencies/floods-2026" target="_blank" rel="noopener noreferrer">Read the source</a>
+                                </div>
+                                <p class="evidence-context">These figures describe individual incidents or regional context, not rankings of disaster frequency.</p>
+                                <div class="region-actions">
+                                    <a class="btn btn-sage" href="SafetyGuides.html">Open safety guides</a>
+                                    <a class="btn btn-outline-sage" href="Checklist.html">My checklist</a>
+                                </div>
+                                <section class="region-evidence">
+                                    <p class="eyebrow">WHY HERE?</p>
+                                    <h3>Why Tanintharyi experiences floods and landslides</h3>
+                                    <p>Tanintharyi has a long coastline, river valleys and mountainous terrain. Prolonged rainfall can raise river levels while also saturating steep slopes, meaning flooding and landslides can occur during the same weather event.</p>
+                                    <div class="region-stat-grid" aria-label="Selected figures for Tanintharyi">
+                                        <div class="region-stat">
+                                            <strong>49,371</strong>
+                                            <span>People affected by September 2026 floods and landslides, according to a Myanmar Red Cross rapid assessment</span>
+                                        </div>
+                                        <div class="region-stat">
+                                            <strong>7,629</strong>
+                                            <span>Houses affected in the same IFRC-reported 2026 assessment</span>
+                                        </div>
+                                    </div>
+                                    <p class="stat-note">Rapid assessment figures reported by the IFRC in October 2026.</p>
+                                    <h3>Three factors to explore</h3>
+                                    <div class="region-reasons">
+                                        <details class="region-reason" open>
+                                            <summary>01. Heavy tropical rainfall</summary>
+                                            <p>Intense or prolonged rainfall sends large amounts of water into rivers and small streams. When channels cannot carry the water, it can spread into low-lying settlements, roads and agricultural areas.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>02. Steep slopes and saturated soil</summary>
+                                            <p>Water enters soil and fractured rock during heavy rain. Rising water pressure can reduce the forces holding material on a hillside. Where slopes are susceptible, soil and rock may move downhill as a landslide.</p>
+                                        </details>
+                                        <details class="region-reason">
+                                            <summary>03. Roads crossing rivers and hills</summary>
+                                            <p>Roads and bridges often pass through valleys or across hillsides. Flooding or slope failure at one location can cut access to surrounding communities and delay transport, medical support and emergency response.</p>
+                                        </details>
+                                    </div>
+                                    <h3>How people and communities are affected</h3>
+                                    <p>Flooding and landslides can affect housing, farmland, roads and bridges. People may temporarily leave unsafe homes, while damaged transport routes make it harder to obtain food, healthcare and other services.</p>
+                                    <p>An IFRC report described around 49,371 affected people and 7,629 affected houses after the September 2026 events. It also recorded 9,032 people temporarily displaced across the affected townships. These figures come from an early needs assessment and may be revised.</p>
+                                    <a class="region-evidence-source" href="https://go.ifrc.org/emergencies/8111/overview" target="_blank" rel="noopener noreferrer">IFRC: Floods and landslides in Tanintharyi, 2026</a>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-note mt-4" data-aos="fade-up">
+                    <i class="bi bi-info-circle" aria-hidden="true"></i>
+                    <p class="mb-0">These are selected historical examples, not hazard rankings or live emergency warnings. Conditions vary within each region, and a grey map area does not mean it is free from hazards.</p>
+                </div>
+                <div class="regional-learning mt-5" data-aos="fade-up">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-8">
+                            <p class="eyebrow">LOOK BEYOND THE MAP</p>
+                            <h2>Location is only part of the story.</h2>
+                            <p class="mb-0">Buildings, local ground conditions, access to information and household needs also matter when understanding disaster risk.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <a class="btn btn-cream" href="UnderstandTR.html">Understand disaster risk</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="source-links" data-aos="fade-up">
+                    <h3>Explore more regional information</h3>
+                    <p class="small mb-2"><a href="https://themimu.info/" target="_blank" rel="noopener noreferrer">Myanmar Information Management Unit — MIMU</a></p>
+                    <p class="small text-secondary mb-0">“Lower Myanmar” describes our project focus, not a precise official administrative boundary.</p>
+                </div>
+            </div>
+        </section>
+        <noscript><div class="container pb-4"><p class="info-note">Enable JavaScript to switch regions and use the interactive map. The Yangon information is available above.</p></div></noscript>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="index.html">
+                        <img src="images/ready-myanmar-logo.png" alt="" width="46" height="46">
+                        <span>Ready <strong>Myanmar</strong></span>
+                    </a>
+                    <p class="mt-4">Know the hazards. Be better prepared.</p>
+                    <p>Ready Myanmar helps communities understand local disaster risks and take practical steps to prepare.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="index.html#about-us">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Disaster Types</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="UnderstandTR.html#earthquakes">Earthquakes</a></li>
+                        <li><a href="UnderstandTR.html#landslides">Landslides</a></li>
+                        <li><a href="UnderstandTR.html#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="UnderstandTR.html#tsunamis">Tsunamis</a></li>
+                        <li><a href="UnderstandTR.html#flooding">Flooding</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3>Regions</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#yangon">Yangon</a></li>
+                        <li><a href="#bago">Bago</a></li>
+                        <li><a href="#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="#mon">Mon</a></li>
+                        <li><a href="#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p class="mb-0">© 2026 Ready Myanmar. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="eyebrow mb-2">READY MYANMAR</p>
+                        <h2 class="modal-title" id="authTitle">Welcome back.</h2>
+                    </div>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close account form"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="auth-note">School demonstration: accounts are saved in this browser only. Please use a made-up password.</p>
+                    <div class="auth-stage">
+                        <div class="auth-panel" id="authPanel">
+                            <div id="loginPanel">
+                                <form id="loginForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginEmail">Email address</label>
+                                        <input class="form-control" id="loginEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginPassword">Password</label>
+                                        <input class="form-control" id="loginPassword" type="password" autocomplete="current-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showLoginPassword" type="checkbox">
+                                        <label class="form-check-label" for="showLoginPassword">Show password</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="loginSubmit" type="submit">Log in</button>
+                                    <p class="auth-switch">New here? <button class="switch-button" id="switchToSignup" type="button">Create an account</button></p>
+                                </form>
+                            </div>
+                            <div id="signupPanel" hidden>
+                                <form id="signupForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupName">Your name</label>
+                                        <input class="form-control" id="signupName" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupEmail">Email address</label>
+                                        <input class="form-control" id="signupEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupPassword">Password</label>
+                                        <input class="form-control" id="signupPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" aria-describedby="passwordHelp" required>
+                                        <p class="password-help" id="passwordHelp">At least 8 characters, including a special character such as ! @ # $ %</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="confirmPassword">Confirm password</label>
+                                        <input class="form-control" id="confirmPassword" type="password" autocomplete="new-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showSignupPassword" type="checkbox">
+                                        <label class="form-check-label" for="showSignupPassword">Show passwords</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="signupSubmit" type="submit">Create account</button>
+                                    <p class="auth-switch">Already have an account? <button class="switch-button" id="switchToLogin" type="button">Log in</button></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="regions.js"></script>
+</body>
+</html>

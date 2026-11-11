@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Guides | Ready Myanmar</title>
+    <link rel="icon" type="image/png" href="images/ready-myanmar-logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="safety.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+        <nav class="navbar navbar-expand-xl sticky-top border-bottom py-3"
+        aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2"
+                href="index.html">
+                <img class="nav-logo"
+                    src="images/ready-myanmar-logo.png"
+                    alt=""
+                    width="40"
+                    height="40">
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+            <button class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto align-items-xl-center gap-xl-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">
+                            Understand the Risks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">
+                            Explore Regions
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Prepare
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2"></i>
+                                    Prepare overview
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Checklist.html">
+                                    <i class="bi bi-list-check me-2"></i>
+                                    Household checklist
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2"></i>
+                                    Safety guides
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">
+                            Resources
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-sage" href="SafetyGuides.html">
+                        Find Safety Guidance
+                    </a>
+                    <div class="account-actions" id="guestActions">
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="login">
+                            <i class="bi bi-person me-1"></i>
+                            Log in
+                        </button>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="signup">
+                            Sign up
+                        </button>
+                    </div>
+                    <div class="account-actions" id="memberActions" hidden>
+                        <span class="account-name">
+                            <i class="bi bi-person-check"></i>
+                            <span id="accountName"></span>
+                        </span>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            id="logoutButton">
+                            Log out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main id="mainContent">
+        <section class="page-hero">
+            <div class="container" data-aos="fade-up">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="Prepare.html">Prepare</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Safety Guides</li>
+                    </ol>
+                </nav>
+                <p class="eyebrow">READY MYANMAR</p>
+                <h1>What would you like guidance about?</h1>
+                <p class="hero-description">Choose a hazard and explore actions before, during and after. Follow local emergency instructions.</p>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <div class="safety-layout">
+                    <aside class="safety-navigation no-print" aria-label="Choose a hazard">
+                        <p class="eyebrow">CHOOSE A HAZARD</p>
+                        <div class="hazard-menu">
+                            <button class="hazard-button active" type="button" data-hazard="earthquakes" aria-pressed="true" aria-controls="safetyGuide">
+                                <i class="bi bi-activity" aria-hidden="true"></i>Earthquakes
+                            </button>
+                            <button class="hazard-button" type="button" data-hazard="landslides" aria-pressed="false" aria-controls="safetyGuide">
+                                <i class="bi bi-triangle" aria-hidden="true"></i>Landslides
+                            </button>
+                            <button class="hazard-button" type="button" data-hazard="subsidence" aria-pressed="false" aria-controls="safetyGuide">
+                                <i class="bi bi-layers" aria-hidden="true"></i>Subsidence &amp; Sinkholes
+                            </button>
+                            <button class="hazard-button" type="button" data-hazard="tsunamis" aria-pressed="false" aria-controls="safetyGuide">
+                                <i class="bi bi-water" aria-hidden="true"></i>Tsunamis
+                            </button>
+                            <button class="hazard-button" type="button" data-hazard="flooding" aria-pressed="false" aria-controls="safetyGuide">
+                                <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i>Flooding
+                            </button>
+                        </div>
+                        <a class="btn btn-outline-sage w-100 mt-4" href="Checklist.html">Open my checklist</a>
+                    </aside>
+                    <article class="content-panel safety-main" id="safetyGuide" aria-labelledby="safetyHeading" data-aos="fade-up">
+                        <p class="eyebrow" id="guideLabel">EARTHQUAKES SAFETY GUIDE</p>
+                        <h2 id="safetyHeading">Actions that fit the situation</h2>
+                        <div class="guide-phases no-print" role="group" aria-label="Choose a stage">
+                            <button class="phase-button active" type="button" data-phase="before" aria-pressed="true" aria-controls="screenGuide">Before</button>
+                            <button class="phase-button" type="button" data-phase="during" aria-pressed="false" aria-controls="screenGuide">During</button>
+                            <button class="phase-button" type="button" data-phase="after" aria-pressed="false" aria-controls="screenGuide">After</button>
+                        </div>
+                        <p class="visually-hidden" id="guideStatus" role="status"></p>
+                        <div class="screen-guide" id="screenGuide">
+                            <h3 id="guideTitle"></h3>
+                            <ol class="guide-actions" id="guideActions"></ol>
+                        </div>
+                        <div id="printGuideContent"></div>
+                        <div class="support-note mt-4">
+                            <h3>Accessibility and support</h3>
+                            <p class="mb-0" id="guideSupport"></p>
+                        </div>
+                        <div class="avoid-box mt-4">
+                            <h3>Unsafe actions to avoid</h3>
+                            <p class="mb-0" id="guideAvoid"></p>
+                        </div>
+                        <div class="source-links">
+                            <h3>Read the full guidance</h3>
+                            <ul id="guideSources"></ul>
+                        </div>
+                        <button class="btn btn-outline-sage no-print mt-3" type="button" id="printGuide">
+                            <i class="bi bi-printer me-2" aria-hidden="true"></i>Print all stages
+                        </button>
+                        <noscript>
+                            <p class="info-note mt-4">Enable JavaScript to display the guides. You can also visit <a href="https://www.ready.gov/">Ready.gov</a> or our <a href="Resources.html">resources page</a>.</p>
+                        </noscript>
+                    </article>
+                    <section class="safety-story no-print" aria-labelledby="storyHeading">
+                        <div class="story-heading">
+                            <span class="story-heading-line" aria-hidden="true"></span>
+                            <p class="eyebrow">BEFORE YOU NEED IT</p>
+                        </div>
+                        <figure class="story-photograph">
+                            <div class="story-photo-stack" id="safetyStoryPhotos">
+                                <img src="images/risk-earthquake.jpg" data-story-photo="earthquakes" alt="Earthquake-related photograph illustrating the selected hazard" width="600" height="800" loading="lazy">
+                                <img src="images/risk-landslide.jpg" data-story-photo="landslides" alt="Landslide-related photograph illustrating the selected hazard" width="600" height="800" loading="lazy" hidden>
+                                <img src="images/risk-sinkhole.jpg" data-story-photo="subsidence" alt="Ground movement photograph illustrating the selected hazard" width="600" height="800" loading="lazy" hidden>
+                                <img src="images/risk-tsunami.jpg" data-story-photo="tsunamis" alt="Tsunami-related photograph illustrating the selected hazard" width="600" height="800" loading="lazy" hidden>
+                                <img src="images/risk-flooding.jpg" data-story-photo="flooding" alt="Flooding photograph illustrating the selected hazard" width="600" height="800" loading="lazy" hidden>
+                            </div>
+                            <figcaption class="story-photo-caption">
+                                <span class="story-caption-label">THINK AHEAD. TALK TOGETHER.</span>
+                                <h2 id="storyHeading">A plan starts with a conversation.</h2>
+                            </figcaption>
+                        </figure>
+                        <p class="story-introduction">Use these questions to start a conversation with your household. Open each one and discuss what would work for you.</p>
+                        <div class="story-prompts">
+                            <details class="story-prompt">
+                                <summary>
+                                    <span class="story-number" aria-hidden="true">01</span>
+                                    <span>Who would you contact?</span>
+                                    <span class="story-toggle" aria-hidden="true"></span>
+                                </summary>
+                                <div class="story-answer">
+                                    <p>Discuss who each person would contact if your household became separated. Check that everyone knows where to find the contact details you agree to use.</p>
+                                    <p class="story-question">Does your plan depend on remembering a number or having a charged phone?</p>
+                                </div>
+                            </details>
+                            <details class="story-prompt">
+                                <summary>
+                                    <span class="story-number" aria-hidden="true">02</span>
+                                    <span>What would you take?</span>
+                                    <span class="story-toggle" aria-hidden="true"></span>
+                                </summary>
+                                <div class="story-answer">
+                                    <p>Look through the household checklist together. Discuss which supplies you already have, what needs replacing and which personal needs your list should include.</p>
+                                    <p class="story-question">Would the same list work for every person in your household?</p>
+                                    <a class="story-inline-link" href="Checklist.html">Review your checklist</a>
+                                </div>
+                            </details>
+                            <details class="story-prompt">
+                                <summary>
+                                    <span class="story-number" aria-hidden="true">03</span>
+                                    <span>Who might need support?</span>
+                                    <span class="story-toggle" aria-hidden="true"></span>
+                                </summary>
+                                <div class="story-answer">
+                                    <p>Ask household members what support they would want. Consider communication, mobility and individual needs, rather than assuming the same arrangements will work for everyone.</p>
+                                    <p class="story-question">Who could help if your usual support person was not nearby?</p>
+                                </div>
+                            </details>
+                        </div>
+                        <p class="story-closing">Start with one question.<br>Make the plan together.</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="footer-logo" href="index.html">
+                        <img src="images/ready-myanmar-logo.png" alt="" width="46" height="46">
+                        <span>Ready <strong>Myanmar</strong></span>
+                    </a>
+                    <p class="mt-4">Know the hazards. Be better prepared.</p>
+                    <p>Ready Myanmar helps communities understand local disaster risks and take practical steps to prepare.</p>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="index.html#about-us">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h3>Disaster Types</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="UnderstandTR.html#earthquakes">Earthquakes</a></li>
+                        <li><a href="UnderstandTR.html#landslides">Landslides</a></li>
+                        <li><a href="UnderstandTR.html#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="UnderstandTR.html#tsunamis">Tsunamis</a></li>
+                        <li><a href="UnderstandTR.html#flooding">Flooding</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h3>Regions</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="ExploreRG.html#yangon">Yangon</a></li>
+                        <li><a href="ExploreRG.html#bago">Bago</a></li>
+                        <li><a href="ExploreRG.html#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="ExploreRG.html#mon">Mon</a></li>
+                        <li><a href="ExploreRG.html#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">© 2026 Ready Myanmar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="eyebrow mb-2">READY MYANMAR</p>
+                        <h2 class="modal-title" id="authTitle">Welcome back.</h2>
+                    </div>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close account form"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="auth-note">School demonstration: accounts are saved in this browser only. Please use a made-up password.</p>
+                    <div class="auth-stage">
+                        <div class="auth-panel" id="authPanel">
+                            <div id="loginPanel">
+                                <form id="loginForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginEmail">Email address</label>
+                                        <input class="form-control" id="loginEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="loginPassword">Password</label>
+                                        <input class="form-control" id="loginPassword" type="password" autocomplete="current-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showLoginPassword" type="checkbox">
+                                        <label class="form-check-label" for="showLoginPassword">Show password</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="loginSubmit" type="submit">Log in</button>
+                                    <p class="auth-switch">New here? <button class="switch-button" id="switchToSignup" type="button">Create an account</button></p>
+                                </form>
+                            </div>
+                            <div id="signupPanel" hidden>
+                                <form id="signupForm" novalidate>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupName">Your name</label>
+                                        <input class="form-control" id="signupName" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupEmail">Email address</label>
+                                        <input class="form-control" id="signupEmail" type="email" autocomplete="username" maxlength="254" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="signupPassword">Password</label>
+                                        <input class="form-control" id="signupPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" aria-describedby="passwordHelp" required>
+                                        <p class="password-help" id="passwordHelp">At least 8 characters, including a special character such as ! @ # $ %</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="confirmPassword">Confirm password</label>
+                                        <input class="form-control" id="confirmPassword" type="password" autocomplete="new-password" maxlength="128" required>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" id="showSignupPassword" type="checkbox">
+                                        <label class="form-check-label" for="showSignupPassword">Show passwords</label>
+                                    </div>
+                                    <button class="btn btn-sage w-100" id="signupSubmit" type="submit">Create account</button>
+                                    <p class="auth-switch">Already have an account? <button class="switch-button" id="switchToLogin" type="button">Log in</button></p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="safety.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f8f7;
+    color: #243746;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+
+.brand-icon {
+    background-color: #078493;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.navbar .nav-link {
+    color: #171717;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #078493;
+}
+
+.btn-teal {
+    --bs-btn-color: white;
+    --bs-btn-bg: #078493;
+    --bs-btn-border-color: #078493;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: #056672;
+    --bs-btn-hover-border-color: #056672;
+    --bs-btn-active-color: white;
+    --bs-btn-active-bg: #056672;
+    --bs-btn-active-border-color: #056672;
+}
+
+.btn-outline-teal {
+    --bs-btn-color: #056672;
+    --bs-btn-border-color: #078493;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: #078493;
+    --bs-btn-hover-border-color: #078493;
+    --bs-btn-active-color: white;
+    --bs-btn-active-bg: #056672;
+    --bs-btn-active-border-color: #056672;
+}
+
+.btn-link {
+    color: #056672;
+}
+
+.btn-link:hover {
+    color: #03434b;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+}
+
+.modal-header {
+    padding: 20px 24px;
+}
+
+@media (max-width: 1199px) {
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 0;
+    }
+}

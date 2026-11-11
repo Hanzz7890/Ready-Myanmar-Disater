@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready Myanmar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="nav bar.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl bg-white border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-fire brand-icon" aria-hidden="true"></i>
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="risks.html">Understand the Risks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="regions.html">Explore Regions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prepare.html">Prepare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex flex-wrap gap-2 mt-3 mt-xl-0">
+                    <a class="btn btn-teal" href="guidance.html">
+                        Find Safety Guidance
+                    </a>
+
+                    <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                    >
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        Log in
+                    </button>
+
+                    <button
+                        class="btn btn-outline-teal"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signupModal"
+                    >
+                        Sign up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="loginTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="loginTitle">
+                        Welcome back
+                    </h2>
+
+                    <button
+                        class="btn-close"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary">
+                        Log in to Ready Myanmar.
+                    </p>
+
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="loginEmail">
+                                Email address
+                            </label>
+                            <input
+                                class="form-control"
+                                type="email"
+                                id="loginEmail"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="loginPassword">
+                                Password
+                            </label>
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="loginPassword"
+                                autocomplete="current-password"
+                                minlength="8"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="showLoginPassword"
+                            >
+                            <label class="form-check-label" for="showLoginPassword">
+                                Show password
+                            </label>
+                        </div>
+
+                        <button class="btn btn-teal w-100" type="submit">
+                            Log in
+                        </button>
+
+                        <p class="text-success mt-3 mb-0" id="loginMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Don't have an account?
+                        <button
+                            class="btn btn-link p-0 align-baseline"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#signupModal"
+                        >
+                            Sign up
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="modal fade"
+        id="signupModal"
+        tabindex="-1"
+        aria-labelledby="signupTitle"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-4" id="signupTitle">
+                        Create an account
+                    </h2>
+
+                    <button
+                        class="btn-close"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <p class="text-secondary">
+                        Join Ready Myanmar.
+                    </p>
+
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="signupName">
+                                Name
+                            </label>
+                            <input
+                                class="form-control"
+                                type="text"
+                                id="signupName"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupEmail">
+                                Email address
+                            </label>
+                            <input
+                                class="form-control"
+                                type="email"
+                                id="signupEmail"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="signupPassword">
+                                Password
+                            </label>
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="signupPassword"
+                                autocomplete="new-password"
+                                minlength="8"
+                                aria-describedby="passwordHelp"
+                                required
+                            >
+                            <div class="form-text" id="passwordHelp">
+                                Use at least 8 characters.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="confirmPassword">
+                                Confirm password
+                            </label>
+                            <input
+                                class="form-control"
+                                type="password"
+                                id="confirmPassword"
+                                autocomplete="new-password"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="showSignupPassword"
+                            >
+                            <label class="form-check-label" for="showSignupPassword">
+                                Show passwords
+                            </label>
+                        </div>
+
+                        <button class="btn btn-teal w-100" type="submit">
+                            Sign up
+                        </button>
+
+                        <p class="text-success mt-3 mb-0" id="signupMessage" role="status"></p>
+                    </form>
+
+                    <p class="text-center mt-4 mb-0">
+                        Already have an account?
+                        <button
+                            class="btn btn-link p-0 align-baseline"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#loginModal"
+                        >
+                            Log in
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="nav bar.js"></script>
+</body>
+</html>

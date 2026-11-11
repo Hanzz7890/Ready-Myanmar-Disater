@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquakes | Ready Myanmar</title>
+    <meta name="description"
+        content="Understand earthquakes, landslides, subsidence, tsunamis and flooding. Explore how hazards happen and why their effects vary.">
+    <link rel="icon" type="image/png"
+        href="images/ready-myanmar-logo.png">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="risk.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to content</a>
+    <nav class="navbar navbar-expand-xl sticky-top border-bottom py-3"
+        aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2"
+                href="index.html">
+                <img class="nav-logo"
+                    src="images/ready-myanmar-logo.png"
+                    alt=""
+                    width="40"
+                    height="40">
+                <span>Ready <strong>Myanmar</strong></span>
+            </a>
+            <button class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav mx-auto align-items-xl-center gap-xl-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UnderstandTR.html">
+                            Understand the Risks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreRG.html">
+                            Explore Regions
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Prepare
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="Prepare.html">
+                                    <i class="bi bi-backpack me-2"></i>
+                                    Prepare overview
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="Checklist.html">
+                                    <i class="bi bi-list-check me-2"></i>
+                                    Household checklist
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="SafetyGuides.html">
+                                    <i class="bi bi-shield-check me-2"></i>
+                                    Safety guides
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">
+                            Resources
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-sage" href="SafetyGuides.html">
+                        Find Safety Guidance
+                    </a>
+                    <div class="account-actions" id="guestActions">
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="login">
+                            <i class="bi bi-person me-1"></i>
+                            Log in
+                        </button>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#authModal"
+                            data-auth-view="signup">
+                            Sign up
+                        </button>
+                    </div>
+                    <div class="account-actions" id="memberActions" hidden>
+                        <span class="account-name">
+                            <i class="bi bi-person-check"></i>
+                            <span id="accountName"></span>
+                        </span>
+                        <button class="btn btn-outline-sage"
+                            type="button"
+                            id="logoutButton">
+                            Log out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<main id="mainContent">
+    <header class="risk-hero">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb risk-breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item">Understand the Risks</li>
+                    <li class="breadcrumb-item active" id="breadcrumbText" aria-current="page">Earthquakes</li>
+                </ol>
+            </nav>
+            <div data-aos="fade-up">
+                <p class="eyebrow" id="pageCategory">GEOLOGICAL HAZARD</p>
+                <h1 id="pageTitle">Earthquakes</h1>
+                <p class="risk-introduction" id="pageDescription">Understand why the ground shakes and how this affects communities.</p>
+            </div>
+        </div>
+    </header>
+    <section class="hazard-details" aria-label="Hazard explanations">
+        <div class="container">
+            <div class="risk-layout">
+                <aside class="hazard-navigation">
+                    <p class="eyebrow">CHOOSE A HAZARD</p>
+                    <div class="hazard-menu" id="hazardTabs" role="tablist" aria-label="Hazards" aria-orientation="vertical">
+                        <button class="hazard-menu-link active" id="earthquakes-tab" data-bs-toggle="tab" data-bs-target="#earthquakes" type="button" role="tab" aria-controls="earthquakes" aria-selected="true">
+                            <i class="bi bi-activity" aria-hidden="true"></i><span>Earthquakes</span>
+                        </button>
+                        <button class="hazard-menu-link" id="landslides-tab" data-bs-toggle="tab" data-bs-target="#landslides" type="button" role="tab" aria-controls="landslides" aria-selected="false">
+                            <i class="bi bi-triangle" aria-hidden="true"></i><span>Landslides</span>
+                        </button>
+                        <button class="hazard-menu-link" id="subsidence-tab" data-bs-toggle="tab" data-bs-target="#subsidence" type="button" role="tab" aria-controls="subsidence" aria-selected="false">
+                            <i class="bi bi-layers" aria-hidden="true"></i><span>Subsidence &amp; Sinkholes</span>
+                        </button>
+                        <button class="hazard-menu-link" id="tsunamis-tab" data-bs-toggle="tab" data-bs-target="#tsunamis" type="button" role="tab" aria-controls="tsunamis" aria-selected="false">
+                            <i class="bi bi-water" aria-hidden="true"></i><span>Tsunamis</span>
+                        </button>
+                        <button class="hazard-menu-link" id="flooding-tab" data-bs-toggle="tab" data-bs-target="#flooding" type="button" role="tab" aria-controls="flooding" aria-selected="false">
+                            <i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i><span>Flooding</span>
+                        </button>
+                    </div>
+                    <a class="btn btn-sage w-100 mt-3" href="SafetyGuides.html">Read safety guidance</a>
+                </aside>
+                <div class="tab-content hazard-content">
+                    <div class="tab-pane hazard-pane active show" id="earthquakes" role="tabpanel" aria-labelledby="earthquakes-tab" tabindex="0">
+                        <figure class="hazard-photo">
+                            <img src="images/UTR earthquake 01.jpg" alt="Earthquake damage to buildings." loading="lazy">
+                            <figcaption>Earthquake impacts</figcaption>
+                        </figure>
+                        <article class="detail-panel">
+                            <div class="hazard-metadata" hidden>
+                                <span class="hazard-title">Earthquakes</span>
+                                <span class="hazard-category">GEOLOGICAL HAZARD</span>
+                                <span class="hazard-introduction">Understand why the ground shakes and how this affects communities.</span>
+                            </div>
+                            <section class="detail-block">
+                                <p class="eyebrow">UNDERSTANDING THE HAZARD</p>
+                                <h2>What is an earthquake?</h2>
+                                <p>An earthquake is ground shaking caused by a sudden release of energy inside the Earth. That energy travels through rock as seismic waves. Earthquakes differ in size, depth and location, so the shaking experienced at the surface is not the same everywhere.</p>
+                                <p>Most earthquakes result from movement along faults. The three explanations below describe different sources of earthquakes worldwide; they are not three stages that every earthquake follows.</p>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Three causes to explore</h2>
+                                <p class="section-hint">Select a heading to read the explanation.</p>
+                                <div class="cause-list">
+                                    <details class="cause-item" open>
+                                        <summary><span class="cause-number">01</span><span>Movement along tectonic faults</span></summary>
+                                        <div class="cause-body">
+                                            <p>Tectonic plates move slowly, but friction can prevent the rocks on either side of a fault from sliding smoothly. Stress then builds in the surrounding rock.</p>
+                                            <p>When that stress overcomes resistance, the fault slips suddenly. Released energy spreads as seismic waves. This explains why slow plate movement can produce a brief, powerful episode of shaking.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">02</span><span>Movement of magma beneath volcanoes</span></summary>
+                                        <div class="cause-body">
+                                            <p>Moving magma can change pressure beneath a volcano and fracture nearby rock. These fractures release energy and produce volcanic earthquakes.</p>
+                                            <p>This is a different setting from ordinary tectonic fault movement. Including it here does not mean that volcanic activity caused a particular earthquake in Myanmar.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">03</span><span>Human changes to underground pressure</span></summary>
+                                        <div class="cause-body">
+                                            <p>Some earthquakes are induced by human activities. Injecting fluid deep underground can raise pressure on a connected fault, reducing the friction resisting movement.</p>
+                                            <p>A fault must already be in suitable conditions for this to happen. Most injection wells are not associated with felt earthquakes, so an industrial activity alone is not evidence of the cause.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Why the damage differs between places</h2>
+                                <p>Shaking depends on the earthquake and the ground it travels through. Building construction also matters: structures exposed to similar shaking can perform differently. Damage may affect homes, roads and buried services.</p>
+                                <p>Ground failure can add to these effects. Shaking may trigger landslides or cause loose, water-saturated sediments to lose strength, a process called liquefaction. This is why damage cannot be explained by earthquake magnitude alone.</p>
+                            </section>
+                            <div class="source-panel">
+                                <h3>Read the supporting information</h3>
+                                <ul>
+                                    <li><a href="https://www.usgs.gov/faqs/what-earthquake-and-what-causes-them-happen" target="_blank" rel="noopener noreferrer">USGS: Earthquake causes</a></li>
+                                    <li><a href="https://www.phivolcs.dost.gov.ph/introduction-to-earthquake/" target="_blank" rel="noopener noreferrer">PHIVOLCS: Tectonic and volcanic earthquakes</a></li>
+                                    <li><a href="https://www.usgs.gov/programs/earthquake-hazards/myths-and-misconceptions-about-induced-earthquakes" target="_blank" rel="noopener noreferrer">USGS: Induced earthquakes</a></li>
+                                    <li><a href="https://pubs.usgs.gov/gip/earthq1/how.html" target="_blank" rel="noopener noreferrer">USGS: Earthquakes and their effects</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tab-pane hazard-pane" id="landslides" role="tabpanel" aria-labelledby="landslides-tab" tabindex="0">
+                        <figure class="hazard-photo">
+                            <img src="images/UTR landslide 02.jpg" alt="Rock and soil displaced down a slope by a landslide." loading="lazy">
+                            <figcaption>Landslide impacts</figcaption>
+                        </figure>
+                        <article class="detail-panel">
+                            <div class="hazard-metadata" hidden>
+                                <span class="hazard-title">Landslides</span>
+                                <span class="hazard-category">GEOLOGICAL HAZARD</span>
+                                <span class="hazard-introduction">Explore why slopes become unstable and material moves downhill.</span>
+                            </div>
+                            <section class="detail-block">
+                                <p class="eyebrow">UNDERSTANDING THE HAZARD</p>
+                                <h2>What is a landslide?</h2>
+                                <p>A landslide is the downhill movement of rock, soil or debris under gravity. It may involve falling rocks, sliding ground or a flowing mixture of water and loose material. Some movements are slow; others develop rapidly.</p>
+                                <p>A slope fails when the forces moving material downhill exceed the strength holding it in place. The following factors can trigger movement or make a slope less stable, and more than one can act together.</p>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Three causes to explore</h2>
+                                <p class="section-hint">Select a heading to read the explanation.</p>
+                                <div class="cause-list">
+                                    <details class="cause-item" open>
+                                        <summary><span class="cause-number">01</span><span>Heavy rainfall and saturated ground</span></summary>
+                                        <div class="cause-body">
+                                            <p>Rainwater enters spaces within soil and fractured rock. As water pressure increases, the contact forces that help particles resist movement can decrease.</p>
+                                            <p>A slope already close to failure may then move. Rainfall duration, intensity and existing ground conditions all matter; the same amount of rain does not produce identical effects on every hillside.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">02</span><span>Earthquake shaking</span></summary>
+                                        <div class="cause-body">
+                                            <p>Earthquake shaking places additional forces on a slope and can dislodge weakened rock or soil. Steep slopes and loose materials may be particularly susceptible.</p>
+                                            <p>The resulting landslide is a secondary hazard: the earthquake provides a trigger, while gravity carries the material downhill.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">03</span><span>Erosion and changes to a slope</span></summary>
+                                        <div class="cause-body">
+                                            <p>A river can erode the bottom of a slope, removing support. Excavation, vegetation removal or altered drainage can also change slope stability.</p>
+                                            <p>For example, directing water onto a hillside can increase saturation. These changes may combine with rainfall or shaking, so a site investigation is needed to assess a particular slope.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                            <section class="detail-block">
+                                <h2>How slope failure affects communities</h2>
+                                <p>Moving material can bury homes and block roads, railways or utilities. Even slow movement can gradually damage foundations and pipelines. The consequences depend on the movement's speed, size and the people or structures in its path.</p>
+                                <p>A blocked route can interrupt services beyond the landslide itself. Some landslides also obstruct rivers, creating additional water-related hazards. Understanding the terrain is therefore as important as identifying the original trigger.</p>
+                            </section>
+                            <div class="source-panel">
+                                <h3>Read the supporting information</h3>
+                                <ul>
+                                    <li><a href="https://www.usgs.gov/programs/landslide-hazards/what-are-landslides-how-can-they-affect-me" target="_blank" rel="noopener noreferrer">USGS: Landslide causes and impacts</a></li>
+                                    <li><a href="https://www.nps.gov/subjects/geohazards/landslide-hazards.htm" target="_blank" rel="noopener noreferrer">National Park Service: Slope instability</a></li>
+                                    <li><a href="https://pubs.usgs.gov/fs/2004/3072/fs-2004-3072.html" target="_blank" rel="noopener noreferrer">USGS: Landslide types and processes</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tab-pane hazard-pane" id="subsidence" role="tabpanel" aria-labelledby="subsidence-tab" tabindex="0">
+                        <figure class="hazard-photo">
+                            <img src="images/UTR sinkhole 03.jpg" alt="A depression or collapse in the ground surface." loading="lazy">
+                            <figcaption>Ground movement and collapse</figcaption>
+                        </figure>
+                        <article class="detail-panel">
+                            <div class="hazard-metadata" hidden>
+                                <span class="hazard-title">Subsidence &amp; Sinkholes</span>
+                                <span class="hazard-category">GEOLOGICAL HAZARD</span>
+                                <span class="hazard-introduction">Understand why the ground can settle, sink or collapse.</span>
+                            </div>
+                            <section class="detail-block">
+                                <p class="eyebrow">UNDERSTANDING THE HAZARD</p>
+                                <h2>What are subsidence and sinkholes?</h2>
+                                <p>Subsidence means the ground surface moves downward. It can affect a broad area gradually. A sinkhole is a more local depression or opening associated with material being removed or support being lost beneath the surface.</p>
+                                <p>The two are related but not identical: sinking ground does not always form an open hole. Different underground materials and processes produce different forms of movement.</p>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Three causes to explore</h2>
+                                <p class="section-hint">Select a heading to read the explanation.</p>
+                                <div class="cause-list">
+                                    <details class="cause-item" open>
+                                        <summary><span class="cause-number">01</span><span>Water dissolving underground rock</span></summary>
+                                        <div class="cause-body">
+                                            <p>Groundwater can slowly dissolve soluble rocks such as limestone or gypsum. Spaces develop beneath the surface as this material is removed.</p>
+                                            <p>The overlying ground may settle into the space or remain intact until its support becomes insufficient. Collapse can then create a sinkhole, sometimes suddenly.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">02</span><span>Groundwater withdrawal and compaction</span></summary>
+                                        <div class="cause-body">
+                                            <p>Removing groundwater can reduce water pressure within an aquifer. In susceptible sediments, the grains compress more tightly under the weight above them.</p>
+                                            <p>This compaction can lower the land surface across a wide area. It is a mechanism of subsidence and does not require a large underground cave or an open sinkhole.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">03</span><span>Underground excavation and lost support</span></summary>
+                                        <div class="cause-body">
+                                            <p>Underground mining removes material that previously helped support the ground. If the remaining supports or the roof of an opening fail, the surface above can settle or collapse.</p>
+                                            <p>This differs from natural rock dissolution. The depth, shape and stability of underground workings influence whether movement reaches the surface.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Why ground movement matters</h2>
+                                <p>Uneven settlement can damage foundations, roads and buried pipes. A sudden collapse can create a local opening, while gradual subsidence may distort structures over a longer period.</p>
+                                <p>The appearance of the surface alone does not identify the cause. Geological conditions, groundwater changes and underground activities must be considered together when investigating a particular location.</p>
+                            </section>
+                            <div class="source-panel">
+                                <h3>Read the supporting information</h3>
+                                <ul>
+                                    <li><a href="https://www.usgs.gov/water-science-school/science/sinkholes" target="_blank" rel="noopener noreferrer">USGS: How sinkholes form</a></li>
+                                    <li><a href="https://www.usgs.gov/mission-areas/water-resources/science/land-subsidence" target="_blank" rel="noopener noreferrer">USGS: Land subsidence</a></li>
+                                    <li><a href="https://www.usgs.gov/faqs/what-difference-between-a-sinkhole-and-land-subsidence" target="_blank" rel="noopener noreferrer">USGS: Subsidence and sinkholes compared</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tab-pane hazard-pane" id="tsunamis" role="tabpanel" aria-labelledby="tsunamis-tab" tabindex="0">
+                        <figure class="hazard-photo">
+                            <img src="images/UTR Tsunami 04.jpg" alt="Coastal damage associated with a tsunami." loading="lazy">
+                            <figcaption>Tsunami impacts on coastal communities</figcaption>
+                        </figure>
+                        <article class="detail-panel">
+                            <div class="hazard-metadata" hidden>
+                                <span class="hazard-title">Tsunamis</span>
+                                <span class="hazard-category">COASTAL HAZARD</span>
+                                <span class="hazard-introduction">Explore how sudden water displacement creates powerful waves.</span>
+                            </div>
+                            <section class="detail-block">
+                                <p class="eyebrow">UNDERSTANDING THE HAZARD</p>
+                                <h2>What is a tsunami?</h2>
+                                <p>A tsunami is a series of long waves generated when a large volume of water is displaced suddenly. Unlike ordinary wind waves, a tsunami involves movement through a substantial part of the water column.</p>
+                                <p>Waves spread from the source and may cross an ocean. At the coast, they can produce rapid flooding and strong currents. The causes below are examples rather than a complete list.</p>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Three causes to explore</h2>
+                                <p class="section-hint">Select a heading to read the explanation.</p>
+                                <div class="cause-list">
+                                    <details class="cause-item" open>
+                                        <summary><span class="cause-number">01</span><span>Sudden movement of the seabed</span></summary>
+                                        <div class="cause-body">
+                                            <p>A large earthquake beneath or near the ocean can lift or lower part of the seabed. This moves the water above it and sends waves outward.</p>
+                                            <p>Not every underwater earthquake produces a significant tsunami. The location, size and movement of the rupture determine how much water is displaced.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">02</span><span>Landslides entering or moving beneath water</span></summary>
+                                        <div class="cause-body">
+                                            <p>A large landslide can push water aside as it enters the sea or moves along the seabed. The volume and speed of the moving material affect the resulting waves.</p>
+                                            <p>These waves can be especially dangerous near their source and may reach nearby shores quickly. Landslide-generated tsunamis generally lose energy faster than large earthquake-generated tsunamis.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">03</span><span>Volcanic eruptions and collapse</span></summary>
+                                        <div class="cause-body">
+                                            <p>Some volcanic activity near water can cause sudden displacement. Examples include a volcano's flank collapsing into the sea, an underwater explosion or volcanic material rapidly entering water.</p>
+                                            <p>The eruption itself is not enough to explain the waves: a process must transfer energy to the water. These mechanisms are uncommon compared with earthquake sources.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                            <section class="detail-block">
+                                <h2>How coastal impacts develop</h2>
+                                <p>Fast-moving water, debris and erosion can damage buildings, boats and coastal infrastructure. Flooding may extend inland, and strong currents can remain dangerous after the first wave has arrived.</p>
+                                <p>Coastal shape, seabed depth and land elevation affect local impacts. A tsunami is a series of waves, so a single photograph of one wave cannot describe the full event or its duration.</p>
+                            </section>
+                            <div class="source-panel">
+                                <h3>Read the supporting information</h3>
+                                <ul>
+                                    <li><a href="https://www.noaa.gov/jetstream/tsunamis" target="_blank" rel="noopener noreferrer">NOAA: Understanding tsunamis</a></li>
+                                    <li><a href="https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-earthquakes" target="_blank" rel="noopener noreferrer">NOAA: Earthquake-generated tsunamis</a></li>
+                                    <li><a href="https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-landslides" target="_blank" rel="noopener noreferrer">NOAA: Landslide-generated tsunamis</a></li>
+                                    <li><a href="https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-volcanoes" target="_blank" rel="noopener noreferrer">NOAA: Volcanic sources</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="tab-pane hazard-pane" id="flooding" role="tabpanel" aria-labelledby="flooding-tab" tabindex="0">
+                        <figure class="hazard-photo">
+                            <img src="images/UTR Flooding 05.jpg" alt="Floodwater covering normally dry land." loading="lazy">
+                            <figcaption>Flooding and community disruption</figcaption>
+                        </figure>
+                        <article class="detail-panel">
+                            <div class="hazard-metadata" hidden>
+                                <span class="hazard-title">Flooding</span>
+                                <span class="hazard-category">HYDROLOGICAL HAZARD</span>
+                                <span class="hazard-introduction">Understand how excess water spreads onto normally dry land.</span>
+                            </div>
+                            <section class="detail-block">
+                                <p class="eyebrow">UNDERSTANDING THE HAZARD</p>
+                                <h2>What is flooding?</h2>
+                                <p>Flooding occurs when water covers normally dry land. It can develop through intense rainfall, rising rivers or seawater moving inland. Several processes may overlap during one event.</p>
+                            </section>
+                            <section class="detail-block">
+                                <h2>Three causes to explore</h2>
+                                <p class="section-hint">Select a heading to read the explanation.</p>
+                                <div class="cause-list">
+                                    <details class="cause-item" open>
+                                        <summary><span class="cause-number">01</span><span>Rainfall exceeding absorption and drainage</span></summary>
+                                        <div class="cause-body">
+                                            <p>Intense rain can accumulate faster than soil absorbs it or drains remove it. Water then collects or flows across the surface.</p>
+                                            <p>Paved areas reduce infiltration, while already saturated soil has less capacity to absorb additional rainfall.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">02</span><span>Rivers overflowing their banks</span></summary>
+                                        <div class="cause-body">
+                                            <p>Rain across a river's catchment feeds water into its channels. When river levels exceed the banks, water spreads across the floodplain.</p>
+                                            <p>Flooding can therefore occur downstream from the heaviest rainfall, even where local rain is limited.</p>
+                                        </div>
+                                    </details>
+                                    <details class="cause-item">
+                                        <summary><span class="cause-number">03</span><span>Storm-driven coastal water</span></summary>
+                                        <div class="cause-body">
+                                            <p>Storm winds can push seawater towards land, raising coastal water levels and flooding low-lying areas.</p>
+                                            <p>This storm surge is different from a tsunami. Rainfall and river flooding may occur during the same storm.</p>
+                                        </div>
+                                    </details>
+                                </div>
+                            </section>
+                            <section class="detail-block">
+                                <h2>How communities are affected</h2>
+                                <p>Floodwater can affect homes, farmland and transport routes. The depth, speed, duration and location of flooding influence the damage.</p>
+                                <p>Interrupted roads can isolate communities, making an event's consequences extend beyond the land directly covered by water.</p>
+                            </section>
+                            <div class="source-panel">
+                                <h3>Read the supporting information</h3>
+                                <ul>
+                                    <li><a href="https://www.weather.gov/safety/flood-hazards" target="_blank" rel="noopener noreferrer">National Weather Service: Flood causes and hazards</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <noscript>
+                <p class="mt-3">Enable JavaScript to switch between the hazard panels. The earthquake explanation is available above.</p>
+            </noscript>
+        </div>
+    </section>
+</main>
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <a class="footer-logo" href="index.html">
+
+                        <img src="images/ready-myanmar-logo.png"
+                            alt=""
+                            width="46"
+                            height="46">
+
+                        <span>Ready <strong>Myanmar</strong></span>
+
+                    </a>
+
+                    <p class="mt-4">Know the hazards. Be better prepared.</p>
+
+                    <p>
+                        Ready Myanmar helps communities understand local disaster
+                        risks and take practical steps to prepare.
+                    </p>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <h3>Quick Links</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="UnderstandTR.html">Understand the Risks</a></li>
+                        <li><a href="ExploreRG.html">Explore Regions</a></li>
+                        <li><a href="Prepare.html">Prepare</a></li>
+                        <li><a href="Checklist.html">Household Checklist</a></li>
+                        <li><a href="SafetyGuides.html">Safety Guides</a></li>
+                        <li><a href="Resources.html">Resources</a></li>
+                        <li><a href="index.html#about-us">About Us</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <h3>Disaster Types</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#earthquakes">Earthquakes</a></li>
+                        <li><a href="#landslides">Landslides</a></li>
+                        <li><a href="#subsidence">Subsidence and Sinkholes</a></li>
+                        <li><a href="#tsunamis">Tsunamis</a></li>
+                        <li><a href="#flooding">Flooding</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-6 col-lg-2">
+
+                    <h3>Regions</h3>
+
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="ExploreRG.html#yangon">Yangon</a></li>
+                        <li><a href="ExploreRG.html#bago">Bago</a></li>
+                        <li><a href="ExploreRG.html#ayeyarwady">Ayeyarwady</a></li>
+                        <li><a href="ExploreRG.html#mon">Mon</a></li>
+                        <li><a href="ExploreRG.html#tanintharyi">Tanintharyi</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">
+                    © 2026 Ready Myanmar. All rights reserved.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="modal fade"
+        id="authModal"
+        tabindex="-1"
+        aria-labelledby="authTitle"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <div>
+                        <p class="eyebrow mb-2">READY MYANMAR</p>
+                        <h2 class="modal-title" id="authTitle">Welcome back.</h2>
+                    </div>
+
+                    <button class="btn-close"
+                        type="button"
+                        data-bs-dismiss="modal"
+                        aria-label="Close account form"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p class="auth-note">
+                        School demonstration: accounts are saved in this browser
+                        only. Please use a made-up password.
+                    </p>
+
+                    <div class="auth-stage">
+
+                        <div class="auth-panel" id="authPanel">
+
+                            <div id="loginPanel">
+
+                                <form id="loginForm" novalidate>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="loginEmail">
+                                            Email address
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="loginEmail"
+                                            type="email"
+                                            autocomplete="username"
+                                            maxlength="254"
+                                            required>
+
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="loginPassword">
+                                            Password
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="loginPassword"
+                                            type="password"
+                                            autocomplete="current-password"
+                                            maxlength="128"
+                                            required>
+
+                                    </div>
+
+                                    <div class="form-check mb-4">
+
+                                        <input class="form-check-input"
+                                            id="showLoginPassword"
+                                            type="checkbox">
+
+                                        <label class="form-check-label"
+                                            for="showLoginPassword">
+                                            Show password
+                                        </label>
+
+                                    </div>
+
+                                    <button class="btn btn-sage w-100"
+                                        id="loginSubmit"
+                                        type="submit">
+                                        Log in
+                                    </button>
+
+                                    <p class="auth-switch">
+                                        New here?
+                                        <button class="switch-button"
+                                            id="switchToSignup"
+                                            type="button">
+                                            Create an account
+                                        </button>
+                                    </p>
+
+                                </form>
+
+                            </div>
+
+                            <div id="signupPanel" hidden>
+
+                                <form id="signupForm" novalidate>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="signupName">
+                                            Your name
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="signupName"
+                                            type="text"
+                                            autocomplete="name"
+                                            minlength="2"
+                                            maxlength="80"
+                                            required>
+
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="signupEmail">
+                                            Email address
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="signupEmail"
+                                            type="email"
+                                            autocomplete="username"
+                                            maxlength="254"
+                                            required>
+
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="signupPassword">
+                                            Password
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="signupPassword"
+                                            type="password"
+                                            autocomplete="new-password"
+                                            minlength="8"
+                                            maxlength="128"
+                                            aria-describedby="passwordHelp"
+                                            required>
+
+                                        <p class="password-help" id="passwordHelp">
+                                            At least 8 characters, including a
+                                            special character such as ! @ # $ %
+                                        </p>
+
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label" for="confirmPassword">
+                                            Confirm password
+                                        </label>
+
+                                        <input class="form-control"
+                                            id="confirmPassword"
+                                            type="password"
+                                            autocomplete="new-password"
+                                            maxlength="128"
+                                            required>
+
+                                    </div>
+
+                                    <div class="form-check mb-4">
+
+                                        <input class="form-check-input"
+                                            id="showSignupPassword"
+                                            type="checkbox">
+
+                                        <label class="form-check-label"
+                                            for="showSignupPassword">
+                                            Show passwords
+                                        </label>
+
+                                    </div>
+
+                                    <button class="btn btn-sage w-100"
+                                        id="signupSubmit"
+                                        type="submit">
+                                        Create account
+                                    </button>
+
+                                    <p class="auth-switch">
+                                        Already have an account?
+                                        <button class="switch-button"
+                                            id="switchToLogin"
+                                            type="button">
+                                            Log in
+                                        </button>
+                                    </p>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="risk.js"></script>
+
+</body>
+
+</html>
